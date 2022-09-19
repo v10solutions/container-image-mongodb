@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#
+# Container Image MongoDB
+#
+
+set -o "errexit"
+set -o "nounset"
+set -o "pipefail"
+
+mongosh \
+	--quiet \
+	--norc \
+	--eval "db.getMongo()" \
+	--tls \
+	--tlsCAFile "/usr/local/etc/mongodb/ca.pem" \
+	"mongodb://$(hostname -f):${1}/?socketTimeoutMS=${2}" \
+| tr -d "\n"

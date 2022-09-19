@@ -1,0 +1,6 @@
+#
+# Container Image MongoDB
+#
+
+etc/mongodb/ca.pem binary
+etc/mongodb/ssl.pem binary

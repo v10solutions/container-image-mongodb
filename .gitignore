@@ -1,0 +1,10 @@
+#
+# Container Image MongoDB
+#
+
+.nova/
+.vscode/
+*.env
+**/.DS_Store
+
+.output/
